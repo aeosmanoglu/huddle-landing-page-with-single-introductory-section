@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --magenta: hsl(300, 69%, 71%);
+  --white: hsla(0, 0%, 100%, 0.8);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--white);
+  line-height: 1.75rem;
+  background-image: url(./images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--violet);
+  margin: 5rem;
+  display: grid;
+  grid-template-areas:
+    "nav nav"
+    "mockups article"
+    "footer footer";
+  grid-auto-columns: 1fr;
+  gap: 5rem;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  margin-top: 0;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.mockups {
+  grid-area: mockups;
+}
+
+article {
+  grid-area: article;
+}
+
+footer {
+  grid-area: footer;
+  text-align: right;
+}
+
+button {
+  border: none;
+  border-radius: 4rem;
+  color: var(--violet);
+  background-color: white;
+  padding: 1rem 4rem;
+  box-shadow: 0px 0.25rem 0.5rem 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+button:hover {
+  color: white;
+  background-color: var(--magenta);
+}
+
+.feather {
+  box-sizing: content-box;
+  padding: 0.5rem;
+  border: 1px solid white;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.feather:hover {
+  border-color: var(--magenta);
+  stroke: var(--magenta);
+}
+
+@media (max-width: 700px) {
+  body {
+    background-image: url(./images/bg-mobile.svg);
+    margin: 2.5rem;
+    display: grid;
+    grid-template-areas:
+      "nav"
+      "mockups"
+      "article"
+      "footer";
+  }
+  article,
+  footer {
+    text-align: center;
+  }
+  button {
+    margin-top: 1.5rem;
+  }
+}
